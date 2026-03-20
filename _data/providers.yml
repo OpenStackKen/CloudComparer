@@ -10,7 +10,7 @@ providers:
     label: Azure
     asset_dir: azure
     header_type: image
-    header_src: assets/img/logo/msazure.svg
+    header_src: assets/img/logo/msazure.png
     header_alt: Microsoft Azure logo
   - id: google
     label: Google Cloud

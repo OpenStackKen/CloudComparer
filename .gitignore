@@ -6,3 +6,5 @@ vendor
 .bundle/
 .npm*
 .playwright*
+.DS_Store
+Library/

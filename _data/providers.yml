@@ -1,16 +1,28 @@
 ---
+# The provider list is the canonical column order for the entire comparison page.
+# Reordering entries here reorders:
+# 1. the provider toggle chips
+# 2. the shared sticky provider logo header
+# 3. every provider column in every category table
+# Keep the IDs stable because the template and CSS-only toggle selectors key off them.
 providers:
+  - id: openstack
+    label: OpenStack
+    asset_dir: openstack
+    header_type: image
+    header_src: assets/img/logo/openstack.svg
+    header_alt: OpenStack logo
   - id: aws
     label: AWS
     asset_dir: aws
     header_type: image
-    header_src: assets/img/logo/aws.png
+    header_src: assets/img/logo/aws-provider.svg
     header_alt: AWS logo
   - id: azure
     label: Azure
     asset_dir: azure
     header_type: image
-    header_src: assets/img/logo/msazure.png
+    header_src: assets/img/logo/microsoft-azure-logo.svg
     header_alt: Microsoft Azure logo
   - id: google
     label: Google Cloud
@@ -18,18 +30,18 @@ providers:
     header_type: image
     header_src: assets/img/logo/google.svg
     header_alt: Google Cloud logo
-  - id: ibm
-    label: IBM Cloud
-    asset_dir: ibm
-    header_type: image
-    header_src: assets/img/logo/IBM-Cloud-svg-lockup-color8.svg
-    header_alt: IBM Cloud logo
   - id: oracle
     label: Oracle Cloud
     asset_dir: oracle
     header_type: image
-    header_src: assets/img/logo/oracle.png
+    header_src: assets/img/logo/oracle-provider.svg
     header_alt: Oracle Cloud logo
+  - id: ibm
+    label: IBM Cloud
+    asset_dir: ibm
+    header_type: image
+    header_src: assets/img/logo/ibm-cloud-logo.svg
+    header_alt: IBM Cloud logo
   - id: alibaba
     label: Alibaba Cloud
     asset_dir: alibaba
@@ -42,9 +54,3 @@ providers:
     header_type: image
     header_src: assets/img/logo/huawei.png
     header_alt: Huawei Cloud logo
-  - id: openstack
-    label: OpenStack
-    asset_dir: openstack
-    header_type: image
-    header_src: assets/img/logo/openstack.svg
-    header_alt: OpenStack logo

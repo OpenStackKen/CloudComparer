@@ -7,15 +7,15 @@ description: Compare service mappings across clouds providers and their infrastr
 <style>
 {% for provider in providers %}
 #provider-toggle-{{ provider.id }}:checked ~ .comparison-controls label[for="provider-toggle-{{ provider.id }}"] {
-  background: #111;
-  border-color: #111;
+  background: #2a7ae2;
+  border-color: #2a7ae2;
   color: #fff;
 }
 
 #provider-toggle-{{ provider.id }}:not(:checked) ~ .comparison-controls label[for="provider-toggle-{{ provider.id }}"] {
-  background: #fff;
-  border-color: #c7d3de;
-  color: #5c6b78;
+  background: #fdfdfd;
+  border-color: #e8e8e8;
+  color: #424242;
 }
 
 #provider-toggle-{{ provider.id }}:not(:checked) ~ .comparison-groups .provider-{{ provider.id }} {
@@ -24,27 +24,23 @@ description: Compare service mappings across clouds providers and their infrastr
 {% endfor %}
 </style>
 
-<section class="comparison-hero">
-  <h1>Cloud Platform Service Comparison</h1>
-  <p>
-    Use the provider toggles to focus the view and collapse categories you do not need.
-  </p>
-</section>
-
 <form class="comparison-layout">
   {% for provider in providers %}
     <input class="provider-toggle" type="checkbox" id="provider-toggle-{{ provider.id }}" checked>
   {% endfor %}
 
   <section class="comparison-controls" aria-label="Visible service providers">
-    <div class="comparison-controls__header">
-      <h2>Visible Service Providers</h2>
-      <button type="reset" class="comparison-reset">Reset</button>
-    </div>
+    <section class="comparison-hero">
+      <h1>Cloud Platform Service Comparison</h1>
+      <p>
+        Use the provider toggles to focus the view and collapse categories you do not need.
+      </p>
+    </section>
     <div class="provider-filter-list">
       {% for provider in providers %}
         <label class="provider-chip" for="provider-toggle-{{ provider.id }}">{{ provider.label }}</label>
       {% endfor %}
+      <button type="reset" class="comparison-reset">Reset</button>
     </div>
   </section>
 
@@ -59,7 +55,7 @@ description: Compare service mappings across clouds providers and their infrastr
           <table class="comparison-table">
             <thead>
               <tr>
-                <th class="service-column">Service</th>
+                <th class="service-column" aria-label="Service"></th>
                 {% for provider in providers %}
                   <th class="provider-column provider-{{ provider.id }}">
                     {% if provider.header_type == "image" %}

@@ -5,6 +5,19 @@
 $content-width: 100%;
 @import "minima";
 
+:root {
+  // The page background token is reused by the sticky provider stack so the pinned
+  // header area reads as one continuous surface and never reveals the table beneath it.
+  --page-background-color: #fff;
+
+  // This is the viewport inset for the pinned comparison stack. It is the visual top
+  // gap above the comparison UI once the stack becomes sticky.
+  --comparison-sticky-top: 40px;
+
+  // Updated at runtime from index.md after the sticky stack is measured. Category
+  // headers use this offset so they pin immediately below the controls/logo area.
+  --comparison-stack-offset: 0px;
+}
 
 ul { padding: 0; list-style-type: none; }
 
@@ -15,6 +28,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { m
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 body {
+  background-color: var(--page-background-color);
   font-family: 'Muli', sans-serif;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
@@ -23,6 +37,18 @@ body {
   font-size: 14px;
   overflow-x: hidden;
   padding: 10px;
+}
+
+body::before {
+  background: var(--page-background-color);
+  content: "";
+  height: var(--comparison-sticky-top);
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 5;
 }
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
@@ -118,6 +144,17 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
   display: block;
 }
 
+.comparison-sticky-stack {
+  // This is the single pinned surface for the control chips and the shared logo header.
+  // Keeping the background here prevents underlying table rows from bleeding through
+  // while the page scrolls underneath the pinned top area.
+  background: var(--page-background-color);
+  margin-bottom: 0;
+  position: sticky;
+  top: var(--comparison-sticky-top);
+  z-index: 4;
+}
+
 .provider-toggle {
   position: absolute;
   opacity: 0;
@@ -125,10 +162,7 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 }
 
 .comparison-controls {
-  position: sticky;
-  top: 0;
-  z-index: 4;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   padding: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
@@ -175,11 +209,45 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
   gap: 18px;
 }
 
+.comparison-header-shell {
+  // The shared provider header is a real table instead of flex/grid because it must
+  // line up exactly with many separate category tables below.
+  background: var(--page-background-color);
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 1px;
+  position: relative;
+}
+
+.comparison-header-table {
+  // Separate border model avoids inheriting default table chrome; the logo header is
+  // meant to be visually minimal while still using table column math for alignment.
+  background: transparent;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.comparison-header-table th,
+.comparison-header-table td {
+  background: var(--page-background-color);
+  border: 0;
+  padding: 0 12px 10px;
+  vertical-align: middle;
+}
+
+.comparison-header-table__spacer {
+  padding: 0;
+}
+
 .category-group {
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background: #fff;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .category-group[open] {
@@ -194,7 +262,10 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
   background: #2a7ae2;
   border-bottom: 1px solid #1756a9;
   color: #fff;
+  position: sticky;
+  top: var(--comparison-stack-offset);
   user-select: none;
+  z-index: 3;
 }
 
 .category-group__title {
@@ -224,6 +295,21 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
   margin-bottom: 0;
   table-layout: fixed;
   width: 100%;
+}
+
+.comparison-table__sr-head {
+  // Each category table keeps semantic column headers for accessibility, but the
+  // visible provider-logo header lives in the shared sticky table above.
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .comparison-table thead th {
@@ -267,12 +353,14 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 }
 
 .provider-logo-frame img {
+  // Header logos are normalized by height, not width. That keeps wide lockups from
+  // inflating the provider columns while still letting each asset use its natural width.
   display: block;
-  max-height: 28px;
-  height: 28px;
-  max-width: 90px;
+  height: 24px;
+  max-height: 24px;
+  max-width: 100%;
   object-fit: contain;
-  width: 100%;
+  width: auto;
 }
 
 .provider-text-mark {
@@ -299,16 +387,19 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 .service-icon-frame {
   align-items: center;
   display: inline-flex;
-  height: 20px;
+  height: 22px;
   justify-content: center;
   width: 20px;
 }
 
 .service-icon-frame img {
+  // Service icons are also height-normalized so the icon column stays narrow and the
+  // visible mark reads at a more consistent size across mixed vendor assets.
   display: block;
-  height: 18px;
+  height: 16px;
+  max-width: 100%;
   object-fit: contain;
-  width: 18px;
+  width: auto;
 }
 
 .service-record__link,
@@ -325,7 +416,7 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 }
 
 /** Site header */
-.site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 55.95px; position: relative; }
+.site-header { display: none; }
 
 .site-title { display: none; }
 
@@ -401,9 +492,17 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
 @media screen and (max-width: 800px) {
+  :root {
+    --comparison-sticky-top: 30px;
+  }
+
   .comparison-controls {
     padding: 14px;
-    position: static;
+  }
+
+  .comparison-header-table th,
+  .comparison-header-table td {
+    padding: 0 8px 10px;
   }
 
   .comparison-hero h1 {
@@ -431,18 +530,21 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
   }
 
   .provider-logo-frame img {
-    max-height: 22px;
-    max-width: 72px;
+    height: 20px;
+    max-height: 20px;
+    max-width: 100%;
+    width: auto;
   }
 
   .service-icon-frame {
-    height: 16px;
+    height: 18px;
     width: 16px;
   }
 
   .service-icon-frame img {
-    height: 14px;
-    width: 14px;
+    height: 12px;
+    max-width: 100%;
+    width: auto;
   }
 }
 

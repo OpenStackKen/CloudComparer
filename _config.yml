@@ -19,14 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Public Cloud Services Comparison
-email: ilyas@bornoncloud.com
 description: >- # this means to ignore newlines until "baseurl:"
   A comparison chart of cloud services across public cloud platforms and open infrastructure platforms, including OpenStack.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ilyas_tweets
-github_username:  ilyas-it83
-linkedin_username:  ilyasf
+github_username: OpenStackKen
+linkedin_username: kencrandall
 
 google_font:
   - url: "http://fonts.googleapis.com/css?family=Cousine:400,700,400italic,700italic&subset=latin,vietnamese,latin-ext"

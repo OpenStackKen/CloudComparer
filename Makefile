@@ -6,8 +6,12 @@ CONTAINER_NAME = cloudcompare-jekyll
 JEKYLL_IMAGE = docker.io/jekyll/jekyll
 JEKYLL_VERSION = 4
 DOCKER = docker
+DOCKER_PLATFORM = linux/amd64
 SITE_ROOT = $(CURDIR)
 JEKYLL_TAG = $(JEKYLL_IMAGE):$(JEKYLL_VERSION)
+BUNDLE_ROOT = $(SITE_ROOT)/.bundle
+BUNDLE_VENDOR = $(BUNDLE_ROOT)/vendor
+BUNDLE_CACHE = $(BUNDLE_ROOT)/cache
 
 .DEFAULT_GOAL := build
 
@@ -16,10 +20,24 @@ JEKYLL_TAG = $(JEKYLL_IMAGE):$(JEKYLL_VERSION)
 all: build
 
 build:
-	$(DOCKER) run --rm --name $(CONTAINER_NAME) --volume="$(SITE_ROOT):/srv/jekyll" $(JEKYLL_TAG) jekyll build
+	mkdir -p "$(BUNDLE_VENDOR)" "$(BUNDLE_CACHE)"
+	$(DOCKER) run --rm --name $(CONTAINER_NAME) \
+		--platform $(DOCKER_PLATFORM) \
+		--volume="$(SITE_ROOT):/srv/jekyll" \
+		--volume="$(BUNDLE_ROOT):/bundle" \
+		-e BUNDLE_PATH=/bundle/vendor \
+		-e BUNDLE_USER_CACHE=/bundle/cache \
+		$(JEKYLL_TAG) sh -lc 'bundle install && bundle exec jekyll build'
 
 serve:
-	$(DOCKER) run --rm --name $(CONTAINER_NAME) --volume="$(SITE_ROOT):/srv/jekyll" -p 4000:4000 -it $(JEKYLL_TAG) jekyll serve --watch --drafts
+	mkdir -p "$(BUNDLE_VENDOR)" "$(BUNDLE_CACHE)"
+	$(DOCKER) run --rm --name $(CONTAINER_NAME) \
+		--platform $(DOCKER_PLATFORM) \
+		--volume="$(SITE_ROOT):/srv/jekyll" \
+		--volume="$(BUNDLE_ROOT):/bundle" \
+		-e BUNDLE_PATH=/bundle/vendor \
+		-e BUNDLE_USER_CACHE=/bundle/cache \
+		-p 4000:4000 -it $(JEKYLL_TAG) sh -lc 'bundle install && bundle exec jekyll serve --watch --drafts'
 
 clean:
 	rm -rf _site

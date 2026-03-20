@@ -1,0 +1,10 @@
+services:
+  caddy:
+    image: caddy:2
+    container_name: cloudcompare-caddy
+    restart: unless-stopped
+    ports:
+      - "8090:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./_site:/srv:ro

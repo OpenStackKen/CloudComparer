@@ -21,7 +21,7 @@
 title: Public Cloud Services Comparison
 email: ilyas@bornoncloud.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A simple cloud comparison chart of all the cloud services offered by the major public cloud vendors globally. 
+  A comparison chart of cloud services across public cloud platforms and open infrastructure platforms, including openCenter.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ilyas_tweets

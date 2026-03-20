@@ -6,9 +6,6 @@ $content-width: 100%;
 @import "minima";
 
 
-table {
-    table-layout: fixed;
-  }
 ul { padding: 0; list-style-type: none; }
 
 /** Reset some basic elements */
@@ -89,28 +86,254 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .social-media-list li + li { padding-top: 5px; }
 
 /** Tables */
-table { margin-bottom: 30px; width: 100%; text-align: left; color: #3f3f3f; border-collapse: collapse; border: 1px solid #e8e8e8; }
+table { margin-bottom: 0; width: 100%; text-align: left; color: #3f3f3f; border-collapse: collapse; border: 1px solid #e8e8e8; }
 
-table tr:nth-child(even) { background-color: #f7f7f7; }
-
-table th, table td { padding: 2px 2px; }
-
-
-// table th img { padding: 0%; }
+table th, table td { padding: 10px 12px; vertical-align: top; }
 
 table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-color: #c9c9c9; }
 
-table.comparison td { border: 1px solid #e8e8e8; }
-table.comparison th {
-  background: white;
-  position: sticky;
-  top: 0; /* Don't forget this, required for the stickiness */
-  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+.comparison-hero {
+  margin-bottom: 28px;
 }
-table.github td { border: 0px }
-table.github { border: 0px }
 
-table td img { padding-right: 2px; width: 18px; height: 18px;}
+.comparison-hero h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.comparison-hero p {
+  margin-bottom: 0;
+  max-width: 72rem;
+  color: #51606d;
+}
+
+.comparison-layout {
+  display: block;
+}
+
+.provider-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.comparison-controls {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border: 1px solid #d9e2ea;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.comparison-controls__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.comparison-controls__header h2 {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.comparison-reset {
+  border: 1px solid #c7d3de;
+  border-radius: 999px;
+  background: #fff;
+  color: #2e3a45;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 14px;
+}
+
+.provider-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.provider-chip {
+  border: 1px solid #c7d3de;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 10px 14px;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.comparison-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.category-group {
+  border: 1px solid #d9e2ea;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.category-group[open] {
+  padding-bottom: 14px;
+}
+
+.category-group__summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  padding: 16px 18px;
+  user-select: none;
+}
+
+.category-group__summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-group__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-group__title::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.category-group[open] .category-group__title::before {
+  content: "\2212";
+}
+
+.comparison-table-wrap {
+  overflow-x: auto;
+  padding: 0 14px 14px;
+}
+
+.comparison-table {
+  min-width: 1520px;
+  margin-bottom: 0;
+  table-layout: auto;
+  width: max-content;
+}
+
+.comparison-table thead th {
+  background: #f8fafc;
+  position: sticky;
+  top: 84px;
+  z-index: 2;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.service-column,
+.service-name-cell {
+  min-width: 260px;
+  width: 260px;
+}
+
+.service-name-cell {
+  background: inherit;
+  border: 1px solid #e8e8e8;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.provider-column {
+  min-width: 150px;
+  width: 150px;
+}
+
+.provider-logo-frame,
+.provider-text-mark {
+  align-items: center;
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.provider-logo-frame img {
+  display: block;
+  height: 32px;
+  max-width: 96px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.provider-text-mark {
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.service-records {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.service-record {
+  align-items: flex-start;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 20px minmax(0, 1fr);
+  margin-bottom: 0;
+}
+
+.service-icon-frame {
+  align-items: center;
+  display: inline-flex;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.service-icon-frame img {
+  display: block;
+  height: 18px;
+  object-fit: contain;
+  width: 18px;
+}
+
+.service-record__link,
+.service-record__name {
+  display: inline-block;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.service-record__name--empty {
+  color: #7a8896;
+  font-style: italic;
+}
 
 /** Site header */
 .site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 55.95px; position: relative; }
@@ -188,7 +411,25 @@ table td img { padding-right: 2px; width: 18px; height: 18px;}
 
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
-@media screen and (max-width: 800px) {table td img {display: none; }}
+@media screen and (max-width: 800px) {
+  .comparison-controls {
+    padding: 14px;
+    position: static;
+  }
+
+  .comparison-controls__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .comparison-hero h1 {
+    font-size: 28px;
+  }
+
+  .comparison-table thead th {
+    top: 0;
+  }
+}
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

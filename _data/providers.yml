@@ -1,0 +1,49 @@
+---
+providers:
+  - id: aws
+    label: AWS
+    asset_dir: aws
+    header_type: image
+    header_src: assets/img/logo/aws.png
+    header_alt: AWS logo
+  - id: azure
+    label: Azure
+    asset_dir: azure
+    header_type: image
+    header_src: assets/img/logo/msazure.svg
+    header_alt: Microsoft Azure logo
+  - id: google
+    label: Google Cloud
+    asset_dir: google
+    header_type: image
+    header_src: assets/img/logo/google.svg
+    header_alt: Google Cloud logo
+  - id: ibm
+    label: IBM Cloud
+    asset_dir: ibm
+    header_type: image
+    header_src: assets/img/logo/IBM-Cloud-svg-lockup-color8.svg
+    header_alt: IBM Cloud logo
+  - id: oracle
+    label: Oracle Cloud
+    asset_dir: oracle
+    header_type: image
+    header_src: assets/img/logo/oracle.png
+    header_alt: Oracle Cloud logo
+  - id: alibaba
+    label: Alibaba Cloud
+    asset_dir: alibaba
+    header_type: image
+    header_src: assets/img/logo/alibaba.png
+    header_alt: Alibaba Cloud logo
+  - id: huawei
+    label: Huawei Cloud
+    asset_dir: huawei
+    header_type: image
+    header_src: assets/img/logo/huawei.png
+    header_alt: Huawei Cloud logo
+  - id: opencenter
+    label: openCenter
+    asset_dir: opencenter
+    header_type: text
+    header_alt: openCenter

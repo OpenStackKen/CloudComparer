@@ -3,9 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
-A simple comparison chart of all the cloud services offered by the major public cloud vendors globally. 
+A comparison chart of cloud services across public cloud platforms and open infrastructure platforms. 
 
-* The portal presents service & feature level mapping between 6 Gartner Magic Quadrant 2018 Qualified major public clouds i.e.Amazon Web Service, Microsoft Azure, Google Cloud, IBM Cloud, Oracle Cloud & Alibaba Cloud
+* The portal presents service- and feature-level mappings across public cloud platforms and open infrastructure platforms, including AWS, Azure, Google Cloud, IBM Cloud, Oracle Cloud, Alibaba Cloud, Huawei Cloud, and openCenter.
 * A Reference manual to help anyone to quickly learn the alternate features & services between clouds
 * This is NOT a comparison chart/material between the cloud providers
 * “None” mentioned against certain services is based on unavailability of certain direct mapping services between cloud providers

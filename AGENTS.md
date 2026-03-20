@@ -22,7 +22,7 @@ Repository instructions for Codex and other coding agents working in `/Users/ken
 
 ## Current Site Direction
 
-- The comparison includes `openCenter` as a provider.
+- The comparison includes `OpenStack` as a provider.
 - Service providers can be shown or hidden from the UI.
 - Services are grouped by category.
 - Categories can be expanded or collapsed.

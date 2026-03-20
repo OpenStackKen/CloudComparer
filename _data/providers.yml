@@ -42,8 +42,9 @@ providers:
     header_type: image
     header_src: assets/img/logo/huawei.png
     header_alt: Huawei Cloud logo
-  - id: opencenter
-    label: openCenter
-    asset_dir: opencenter
-    header_type: text
-    header_alt: openCenter
+  - id: openstack
+    label: OpenStack
+    asset_dir: openstack
+    header_type: image
+    header_src: assets/img/logo/openstack.svg
+    header_alt: OpenStack logo

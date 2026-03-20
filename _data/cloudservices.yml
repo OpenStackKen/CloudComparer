@@ -36,10 +36,10 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
-    - name: 
-      ref: 
-      icon: none.png
+  - openstack:
+    - name: OpenStack Ironic
+      ref: https://docs.rackspacecloud.com/genestack-components/
+      icon: ironic.png
 - category: Compute
   categoryurl: 
   subcategory: Virtual Server
@@ -85,10 +85,10 @@ services:
     - name: Huawei Cloud Elastic Cloud Server
       ref: https://www.huaweicloud.com/intl/en-us/product/ecs.html
       icon: ecs.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Nova
       ref: https://docs.rackspacecloud.com/openstack-compute-kit-nova/
-      icon: none.png
+      icon: nova.png
 - category: Compute
   categoryurl: 
   subcategory: Bare Metal Server
@@ -122,10 +122,10 @@ services:
     - name: Huawei Cloud Bare Metal Server
       ref: https://www.huaweicloud.com/intl/en-us/product/bms.html
       icon: bms.png
-  - opencenter:
-    - name: 
-      ref: 
-      icon: none.png
+  - openstack:
+    - name: OpenStack Magnum
+      ref: https://docs.rackspacecloud.com/openstack-magnum/
+      icon: magnum.png
 - category: Compute
   categoryurl: 
   subcategory: VMware
@@ -168,10 +168,10 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
-    - name: 
-      ref: 
-      icon: none.png
+  - openstack:
+    - name: OpenStack Manila
+      ref: https://docs.rackspacecloud.com/openstack-manila/
+      icon: manila.png
 - category: Compute
   categoryurl: 
   subcategory: Virtual Dedicated Host
@@ -211,10 +211,10 @@ services:
     - name: Huawei Cloud Dedicate Host
       ref: https://www.huaweicloud.com/intl/en-us/product/deh.html
       icon: deh.png
-  - opencenter:
-    - name: 
-      ref: 
-      icon: none.png
+  - openstack:
+    - name: OpenStack Designate
+      ref: https://docs.rackspacecloud.com/openstack-designate/
+      icon: designate.png
 - category: Compute
   categoryurl: 
   subcategory: High Performance Computing
@@ -260,10 +260,10 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
-    - name: 
-      ref: 
-      icon: none.png
+  - openstack:
+    - name: OpenStack Freezer
+      ref: https://docs.rackspacecloud.com/openstack-freezer/
+      icon: freezer.png
 - category: Compute
   categoryurl: 
   subcategory: Container Registration Service
@@ -297,7 +297,7 @@ services:
     - name: Software Repository for Container
       ref: https://www.huaweicloud.com/intl/en-us/product/swr.html
       icon: swr.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -361,7 +361,7 @@ services:
     - name: Cloud Container Engine
       ref: https://www.huaweicloud.com/intl/en-us/product/cce.html
       icon: cce.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -404,7 +404,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -441,7 +441,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -490,7 +490,7 @@ services:
     - name: FunctionGraph
       ref: https://www.huaweicloud.com/intl/en-us/product/functiongraph.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -527,7 +527,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -567,7 +567,7 @@ services:
     - name: Hyper Elastic Cloud Server
       ref: https://www.huaweicloud.com/product/hecs.html
       icon: ecs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -607,7 +607,7 @@ services:
     - name: Auto Scaling
       ref: https://www.huaweicloud.com/intl/en-us/product/as.html
       icon: as.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -647,7 +647,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -690,7 +690,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -736,7 +736,7 @@ services:
     - name: FunctionGraph
       ref: https://www.huaweicloud.com/intl/en-us/product/functiongraph.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -773,10 +773,10 @@ services:
     - name: Object Storage Service
       ref: https://www.huaweicloud.com/intl/en-us/product/obs.html
       icon: obs.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Swift Object Storage
       ref: https://docs.rackspacecloud.com/openstack-object-storage-swift/
-      icon: none.png
+      icon: swift.png
 - category: Storage
   categoryurl: 
   subcategory: Virtual Machine Disk Storage
@@ -816,10 +816,10 @@ services:
     - name: Elastic Volume Service
       ref: https://www.huaweicloud.com/intl/en-us/product/evs.html
       icon: evs.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Cinder
       ref: https://docs.rackspacecloud.com/openstack-cinder/
-      icon: none.png
+      icon: cinder.png
 - category: Storage
   categoryurl: 
   subcategory: File Storage (SMB Compatible)
@@ -868,7 +868,7 @@ services:
     - name: Scalable File Service
       ref: https://www.huaweicloud.com/intl/en-us/product/sfs.html
       icon: sfs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -914,7 +914,7 @@ services:
     - name: Object Storage Service
       ref: https://www.huaweicloud.com/intl/en-us/product/obs.html
       icon: obs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -951,7 +951,7 @@ services:
     - name: Cloud Storage Gateway
       ref: https://www.huaweicloud.com/product/csg.html
       icon: csg.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1063,7 +1063,7 @@ services:
     - name: RDS for PostgreSQL
       ref: https://www.huaweicloud.com/intl/en-us/product/pg.html
       icon: PostgreSQL.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1148,7 +1148,7 @@ services:
     - name: Graph Engine Service
       ref: https://www.huaweicloud.com/intl/en-us/product/ges.html
       icon: ges.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1188,7 +1188,7 @@ services:
     - name: GaussDB(for Influx)
       ref: https://www.huaweicloud.com/intl/en-us/product/gaussdbforinflux.html
       icon: GaussDBforInflux.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1231,7 +1231,7 @@ services:
     - name: Graph Engine Service (GES)
       ref: https://www.huaweicloud.com/intl/en-us/product/ges.html
       icon: ges.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1274,7 +1274,7 @@ services:
     - name: Distributed Cache Service for Redis
       ref: https://www.huaweicloud.com/intl/en-us/product/dcs.html
       icon: dcs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1314,7 +1314,7 @@ services:
     - name: GaussDB(DWS)
       ref: https://www.huaweicloud.com/intl/en-us/product/dws.html
       icon: dws.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1360,7 +1360,7 @@ services:
     - name: Data Replication Service(DRS)
       ref: https://www.huaweicloud.com/intl/en-us/product/drs.html
       icon: drs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1415,7 +1415,7 @@ services:
     - name: Server Migration Service
       ref: https://www.huaweicloud.com/intl/en-us/product/sms.html
       icon: sms.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1458,7 +1458,7 @@ services:
     - name: Data Express Service - Disk
       ref: https://www.huaweicloud.com/intl/en-us/product/des.html
       icon: des.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1498,7 +1498,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1541,7 +1541,7 @@ services:
     - name: Data Express Service - Teleport
       ref: https://www.huaweicloud.com/intl/en-us/product/des.html
       icon: des.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1578,7 +1578,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1615,7 +1615,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1652,10 +1652,10 @@ services:
     - name: Virtual Private Cloud
       ref: https://www.huaweicloud.com/intl/en-us/product/vpc.html
       icon: vpc.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Neutron
       ref: https://docs.rackspacecloud.com/openstack-compute-kit-neutron/
-      icon: none.png
+      icon: neutron.png
 - category: Networking & Content Delivery
   categoryurl: 
   subcategory: Virtual network connectivity
@@ -1692,7 +1692,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1735,7 +1735,7 @@ services:
     - name: Virtual Private Network
       ref: https://www.huaweicloud.com/intl/en-us/product/vpn.html
       icon: vpn.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1775,13 +1775,13 @@ services:
     - name: Huawei Cloud CDN
       ref: https://www.huaweicloud.com/intl/en-us/product/cdn.html
       icon: hwCDN.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
 - category: Networking
   categoryurl: 
-  subcategory: Networking & Content Delivery
+  subcategory: Name services and DNS
   subcategoryurl: 
   service:
   - aws:
@@ -1815,7 +1815,7 @@ services:
     - name: Domain Name Service
       ref: https://www.huaweicloud.com/intl/en-us/product/dns.html
       icon: dns.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1858,7 +1858,7 @@ services:
     - name: Domain Name Service
       ref: https://www.huaweicloud.com/intl/en-us/product/dns.html
       icon: dns.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1901,7 +1901,7 @@ services:
     - name: Huawei Cloud CLOUD Stack
       ref: https://www.huaweicloud.com/intl/en-us/product/huaweicloudstack.html
       icon: hcs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1941,7 +1941,7 @@ services:
     - name: Direct Connect
       ref: https://www.huaweicloud.com/intl/en-us/product/dc.html
       icon: dc.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -1984,10 +1984,10 @@ services:
     - name: Elastic Load Balance
       ref: https://www.huaweicloud.com/intl/en-us/product/elb.html
       icon: elb.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Octavia
       ref: https://docs.rackspacecloud.com/openstack-octavia/
-      icon: none.png
+      icon: octavia.png
 - category: Developer Tools
   categoryurl: https://en.wikipedia.org/wiki/Programming_tool
   subcategory: Cloud Software Development Kit
@@ -2066,7 +2066,7 @@ services:
     - name: DevStar
       ref: https://developer.huaweicloud.com/resource/devstar.html
       icon: devstar.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2127,7 +2127,7 @@ services:
     - name: HUAWEI CLOUD SDKs
       ref: https://developer.huaweicloud.com/intl/en-us/sdk?all
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2164,7 +2164,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2210,7 +2210,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2319,7 +2319,7 @@ services:
     - name: CES
       ref: https://www.huaweicloud.com/intl/en-us/product/ces.html
       icon: ces.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2365,7 +2365,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2411,7 +2411,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2448,7 +2448,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2503,7 +2503,7 @@ services:
     - name: Cost Management
       ref: https://support.huaweicloud.com/intl/en-us/usermanual-cost/costcenter_0000001.html
       icon: costMgmt.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2558,7 +2558,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2655,7 +2655,7 @@ services:
     - name: CloudShell
       ref: https://shell.huaweicloud.com/
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2692,7 +2692,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2738,7 +2738,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2781,10 +2781,10 @@ services:
     - name: Identity and Access Management
       ref: https://www.huaweicloud.com/intl/en-us/s/JUlBTSU
       icon: iam.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Keystone
       ref: https://docs.rackspacecloud.com/openstack-keystone/
-      icon: none.png
+      icon: keystone.png
 - category: Security, Identity & Compliance
   categoryurl: 
   subcategory: Customer Identity and Access Management
@@ -2821,7 +2821,7 @@ services:
     - name: 
       ref: 
       icon: 
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2864,7 +2864,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2901,7 +2901,7 @@ services:
     - name: SSL Certificate Manager
       ref: https://www.huaweicloud.com/intl/en-us/product/scm.html
       icon: ssl.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2947,7 +2947,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -2999,7 +2999,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3042,10 +3042,10 @@ services:
     - name: Data Encryption Workshop
       ref: https://www.huaweicloud.com/intl/en-us/product/dew.html
       icon: dew.png
-  - opencenter:
+  - openstack:
     - name: OpenStack Barbican
       ref: https://docs.rackspacecloud.com/openstack-barbican/
-      icon: none.png
+      icon: barbican.png
 - category: Security, Identity & Compliance
   categoryurl: 
   subcategory: Consolidated Management of Multiple Cloud Accounts
@@ -3088,7 +3088,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3125,7 +3125,7 @@ services:
     - name: Advanced Anti-DDoS
       ref: https://www.huaweicloud.com/intl/en-us/product/aad.html
       icon: Anti-DDoS.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3162,7 +3162,7 @@ services:
     - name: Web Application Firewall
       ref: https://www.huaweicloud.com/intl/en-us/product/waf.html
       icon: waf.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3202,7 +3202,7 @@ services:
     - name: Security Compliance
       ref: https://www.huaweicloud.com/intl/en-us/securecenter/safetycompliance.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3239,7 +3239,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3276,7 +3276,7 @@ services:
     - name: Data Security Center
       ref: https://www.huaweicloud.com/intl/en-us/product/dsc.html
       icon: DSC.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3319,7 +3319,7 @@ services:
     - name: Data Lake Insight
       ref: https://www.huaweicloud.com/intl/en-us/product/dli.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3356,7 +3356,7 @@ services:
     - name: MapReduce Service
       ref: https://www.huaweicloud.com/intl/en-us/product/mrs.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3396,7 +3396,7 @@ services:
     - name: Cloud Search Service
       ref: https://www.huaweicloud.com/intl/en-us/product/es.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3442,7 +3442,7 @@ services:
     - name: 'Data Lake Insight [Previous: Cloud Stream Service]'
       ref: https://www.huaweicloud.com/intl/en-us/product/dli.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3482,7 +3482,7 @@ services:
     - name: Data Warehouse Service
       ref: https://www.huaweicloud.com/intl/en-us/product/dws.html
       icon: dws.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3531,7 +3531,7 @@ services:
     - name: Data Lake Visulization
       ref: https://www.huaweicloud.com/intl/en-us/product/dlv.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3598,7 +3598,7 @@ services:
     - name: Data Lake Governance Center
       ref: https://www.huaweicloud.com/intl/en-us/product/dayu.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3635,7 +3635,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3672,7 +3672,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3754,7 +3754,7 @@ services:
     - name: Knowledge Graph
       ref: https://www.huaweicloud.com/product/nlpkg.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3812,7 +3812,7 @@ services:
     - name: ASR Customization
       ref: https://www.huaweicloud.com/intl/en-us/product/asrc.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3876,7 +3876,7 @@ services:
     - name: Celebrity Recognition
       ref: https://www.huaweicloud.com/product/roc.html
       icon: roc.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3934,7 +3934,7 @@ services:
     - name: ModelArts
       ref: https://www.huaweicloud.com/intl/en-us/product/modelarts.html
       icon: ModelArts.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -3977,7 +3977,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4032,7 +4032,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4069,7 +4069,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4106,7 +4106,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4146,7 +4146,7 @@ services:
     - name: ServiceStage-MBaaS
       ref: https://www.huaweicloud.com/intl/en-us/product/servicestage.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4186,7 +4186,7 @@ services:
     - name: API Gateway
       ref: https://www.huaweicloud.com/intl/en-us/product/apig.html
       icon: apig.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4223,7 +4223,7 @@ services:
     - name: ServiceStage-MBaaS
       ref: https://www.huaweicloud.com/intl/en-us/product/servicestage.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4263,7 +4263,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4300,7 +4300,7 @@ services:
     - name: MobileTest
       ref: https://www.huaweicloud.com/product/mobileapptest.html
       icon: MobileTest.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4337,7 +4337,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4407,7 +4407,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4444,7 +4444,7 @@ services:
     - name: ServiceStage-MBaaS
       ref: https://www.huaweicloud.com/intl/en-us/product/servicestage.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4496,7 +4496,7 @@ services:
     - name: API Gateway
       ref: https://www.huaweicloud.com/intl/en-us/product/apig.html
       icon: apig.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4587,7 +4587,7 @@ services:
     - name: Convergent Video Cloud Service
       ref: https://www.huaweicloud.com/en-us/product/cvcs.html
       icon: cvcs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4642,7 +4642,7 @@ services:
     - name: Distributed Message Service for Kafka
       ref: https://www.huaweicloud.com/intl/en-us/product/dmskafka.html
       icon: DMSforKafka.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4679,7 +4679,7 @@ services:
     - name: ServiceStage-MBaaS
       ref: https://www.huaweicloud.com/intl/en-us/product/servicestage.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4716,7 +4716,7 @@ services:
     - name: CoreMail
       ref: https://marketplace.huaweicloud.com/intl/product/f4cd8ad7-ecb4-41fe-9706-504315bf5aaa
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4759,7 +4759,7 @@ services:
     - name: Message&SMS (MSGSMS)
       ref: https://www.huaweicloud.com/intl/en-us/product/msgsms.html
       icon: msgsms.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4808,7 +4808,7 @@ services:
     - name: Blockchain Service
       ref: https://www.huaweicloud.com/intl/en-us/product/bcs.html
       icon: bcs.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4851,7 +4851,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4894,7 +4894,7 @@ services:
     - name: WPS
       ref: https://marketplace.huaweicloud.com/intl/product/00301-107037-0--0
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4940,7 +4940,7 @@ services:
     - name: Workspace
       ref: 
       icon: EnterpriseAPPWorkspace.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -4980,7 +4980,7 @@ services:
     - name: Workspace
       ref: 
       icon: EnterpriseAPPWorkspace.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5017,7 +5017,7 @@ services:
     - name: Huawei Cloud Marketplace
       ref: https://marketplace.huaweicloud.com/intl/
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5072,7 +5072,7 @@ services:
     - name: HUAWEI CLOUD IoT Global SIM Link
       ref: https://www.huaweicloud.com/product/globalsimlink.html
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5118,7 +5118,7 @@ services:
     - name: HUAWEI Cloud IoT Stage
       ref: https://www.huaweicloud.com/product/iotstage.html
       icon: IoTStage.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5155,7 +5155,7 @@ services:
     - name: HUAWEI Cloud IoT Analysis
       ref: https://www.huaweicloud.com/product/iotanalytics-platform.html
       icon: IoTanalytics.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5192,7 +5192,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5229,7 +5229,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5266,7 +5266,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png
@@ -5303,7 +5303,7 @@ services:
     - name: 
       ref: 
       icon: none.png
-  - opencenter:
+  - openstack:
     - name: 
       ref: 
       icon: none.png

@@ -37,9 +37,9 @@ services:
       ref: 
       icon: none.png
   - openstack:
-    - name: OpenStack Ironic
-      ref: https://docs.rackspacecloud.com/genestack-components/
-      icon: ironic.png
+    - name: 
+      ref: 
+      icon: none.png
 - category: Compute
   categoryurl: 
   subcategory: Virtual Server
@@ -123,9 +123,9 @@ services:
       ref: https://www.huaweicloud.com/intl/en-us/product/bms.html
       icon: bms.png
   - openstack:
-    - name: OpenStack Magnum
-      ref: https://docs.rackspacecloud.com/openstack-magnum/
-      icon: magnum.png
+    - name: OpenStack Ironic
+      ref: https://docs.rackspacecloud.com/genestack-components/
+      icon: ironic.png
 - category: Compute
   categoryurl: 
   subcategory: VMware
@@ -169,9 +169,9 @@ services:
       ref: 
       icon: none.png
   - openstack:
-    - name: OpenStack Manila
-      ref: https://docs.rackspacecloud.com/openstack-manila/
-      icon: manila.png
+    - name: 
+      ref: 
+      icon: none.png
 - category: Compute
   categoryurl: 
   subcategory: Virtual Dedicated Host
@@ -212,9 +212,9 @@ services:
       ref: https://www.huaweicloud.com/intl/en-us/product/deh.html
       icon: deh.png
   - openstack:
-    - name: OpenStack Designate
-      ref: https://docs.rackspacecloud.com/openstack-designate/
-      icon: designate.png
+    - name: 
+      ref: 
+      icon: none.png
 - category: Compute
   categoryurl: 
   subcategory: High Performance Computing
@@ -261,9 +261,9 @@ services:
       ref: 
       icon: none.png
   - openstack:
-    - name: OpenStack Freezer
-      ref: https://docs.rackspacecloud.com/openstack-freezer/
-      icon: freezer.png
+    - name: 
+      ref: 
+      icon: none.png
 - category: Compute
   categoryurl: 
   subcategory: Container Registration Service
@@ -362,9 +362,9 @@ services:
       ref: https://www.huaweicloud.com/intl/en-us/product/cce.html
       icon: cce.png
   - openstack:
-    - name: 
-      ref: 
-      icon: none.png
+    - name: OpenStack Magnum
+      ref: https://docs.rackspacecloud.com/openstack-magnum/
+      icon: magnum.png
 - category: Compute
   categoryurl: 
   subcategory: Serverless compute for containers
@@ -869,9 +869,9 @@ services:
       ref: https://www.huaweicloud.com/intl/en-us/product/sfs.html
       icon: sfs.png
   - openstack:
-    - name: 
-      ref: 
-      icon: none.png
+    - name: OpenStack Manila
+      ref: https://docs.rackspacecloud.com/openstack-manila/
+      icon: manila.png
 - category: Storage
   categoryurl: 
   subcategory: Long Term Cold Storage
@@ -1816,9 +1816,9 @@ services:
       ref: https://www.huaweicloud.com/intl/en-us/product/dns.html
       icon: dns.png
   - openstack:
-    - name: 
-      ref: 
-      icon: none.png
+    - name: OpenStack Designate
+      ref: https://docs.rackspacecloud.com/openstack-designate/
+      icon: designate.png
 - category: Networking
   categoryurl: 
   subcategory: Global Traffic Management
@@ -2739,9 +2739,9 @@ services:
       ref: 
       icon: none.png
   - openstack:
-    - name: 
-      ref: 
-      icon: none.png
+    - name: OpenStack Freezer
+      ref: https://docs.rackspacecloud.com/openstack-freezer/
+      icon: freezer.png
 - category: Security, Identity & Compliance
   categoryurl: 
   subcategory: Identity & Access Management
